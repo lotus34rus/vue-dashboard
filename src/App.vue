@@ -5,7 +5,7 @@
     />
     <div class="page-content" :class="{menuIsOpen : menuIsOpen}">
       <Header 
-      @clickOnMenuBtn = "toggleMenu"
+      @click-on-menu-btn = "toggleMenu"
       />
       <router-view />
     </div>
@@ -20,7 +20,7 @@ import Sidebar from "@/components/layout/Sidebar";
 export default {
   data() {
     return {
-      menuIsOpen: false
+      menuIsOpen: true
     }
   },
   components: {

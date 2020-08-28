@@ -2,31 +2,22 @@
   <nav class="white">
     <div class="nav-wrapper">
       <div class="left-side flex">
-        <button type="button" class="hamburger" @click="$emit('clickOnMenuBtn')">
+        <button type="button" class="hamburger" @click="$emit('click-on-menu-btn')">
           <span></span>
         </button>
         <ul class="hide-on-med-and-down">
           <li>
-            <router-link to="/">Home</router-link>
+            <router-link to="/">Dashboard</router-link>
           </li>
           <li>
-            <router-link to="/about">About</router-link>
+            <router-link to="/about">Users</router-link>
           </li>
         </ul>
       </div>
 
-      <ul class="right hide-on-med-and-down">
-        <li>
-          <router-link to="/">Home</router-link>
-        </li>
-        <li>
-          <router-link to="/about">About</router-link>
-        </li>
-      </ul>
-      <div class="col s12 dm_breadcrumb">
-        <router-link to="/">Home</router-link>/
-        <span>Analitic</span>
-      </div>
+  
+      <HeaderIcons />
+      <Breadcrumbs />
     </div>
   </nav>
 </template>
@@ -34,7 +25,16 @@
 
 
 <script>
-export default {};
+import Breadcrumbs from "@/components/layout/Breadcrumbs";
+import HeaderIcons from "@/components/layout/HeaderIcons";
+
+
+export default {
+  name: "Header",
+  components: {
+    Breadcrumbs, HeaderIcons
+  },
+};
 </script>
 
 
@@ -42,6 +42,7 @@ export default {};
 nav {
   position: sticky;
   left: 0;
+  top: 0;
   width: 0;
   height: auto;
   width: 100%;
@@ -52,29 +53,12 @@ nav {
   justify-content: space-between;
   flex-wrap: wrap;
   ul {
-    a {
+    height: 56px;
+    a, i {
       color: rgba(0, 0, 21, 0.5);
     }
   }
-  .dm_breadcrumb {
-    width: 100%;
-    border-top: 1px solid rgba(0, 0, 21, 0.2);
-    padding-left: 17px;
-    color: rgba(0, 0, 21, 0.5);
-    a {
-      color: rgba(0, 0, 21, 0.5);
-      padding-right: 10px;
-      &:hover{
-          text-decoration: underline;
-      }
-    }
-    span{
-        padding-left: 10px;
-    }
-    .router-link-active {
-      color: #321fdb;
-    }
-  }
+
 }
 .hamburger {
   min-width: 50px;
