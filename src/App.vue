@@ -46,13 +46,14 @@ export default {
 }
 body {
   color: black;
+  min-height: 100vh;
+  background-color: #ebedef;
 }
 .flex {
   display: flex;
 }
 .page-content{
   width: 100%;
-  background-color: #ebedef;
   &.menuIsOpen{
     margin-left: 256px;
   }
