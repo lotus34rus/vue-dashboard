@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="flex">
+  <div id="app" class="">
     <Sidebar
      :menuIsOpen = menuIsOpen 
     />
@@ -8,13 +8,17 @@
       @click-on-menu-btn = "toggleMenu"
       />
       <router-view />
+      <Footer />
     </div>
+
   </div>
 </template>
 
 <script>
 import Header from "@/components/layout/Header";
 import Sidebar from "@/components/layout/Sidebar";
+import Footer from "@/components/layout/Footer";
+
 
 
 export default {
@@ -24,7 +28,7 @@ export default {
     }
   },
   components: {
-    Header, Sidebar
+    Header, Sidebar, Footer
   },
 
   methods: {
@@ -48,6 +52,7 @@ body {
 }
 .page-content{
   width: 100%;
+  background-color: #ebedef;
   &.menuIsOpen{
     margin-left: 256px;
   }
