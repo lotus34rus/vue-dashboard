@@ -1,6 +1,6 @@
 <template>
   <footer class="page-footer footer-copyright white">
-      © 2020 DM-dashboard
+      © 2020 MD-dashboard
       <span class="right">Powered by <a href="dm-code.ru">DM-CODE</a></span>
       
   </footer>
