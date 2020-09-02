@@ -4,8 +4,8 @@
       <img src="img/md-dash.png" alt />
     </router-link>
     <ul>
-      <li>
-        <router-link to="/">
+      <li class="waves-effect waves-default">
+        <router-link to="/" >
           <i class="material-icons">dashboard</i>Dashboard
         </router-link>
       </li>

@@ -1,27 +1,35 @@
 <template>
   <div>
-      Main page
+    <div class="row">
+      <CardChartComponent />
+    </div>
 
-      <div class="big-chart">
-        <LineChart />
+    <div class="row">
+      <div class="col s12">
+        <LineChartComponent />
       </div>
+    </div>
   </div>
 </template>
 
 <script>
-import LineChart from '@/components/charts/LineChart'
+import LineChartComponent from "@/components/charts/LineChartComponent";
+import CardChartComponent from "@/components/charts/CardChartComponent";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    LineChart
-  }
-}
+    LineChartComponent,
+    CardChartComponent,
+
+  },
+
+};
 </script>
 
 
-<style lang="scss" scoped>
-  .big-chart{
-    height: 300px; 
-  }
+<style lang="scss">
+
+
+
 </style>

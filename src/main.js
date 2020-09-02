@@ -8,6 +8,11 @@ import 'materialize-css/dist/js/materialize.min.js'
 
 
 
+import KProgress from 'k-progress';
+Vue.component('k-progress', KProgress);
+
+
+
 Vue.config.productionTip = false
 
 new Vue({

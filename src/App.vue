@@ -3,11 +3,13 @@
     <Sidebar
      :menuIsOpen = menuIsOpen 
     />
-    <div class="page-content" :class="{menuIsOpen : menuIsOpen}">
+    <div class="wrapper" :class="{menuIsOpen : menuIsOpen}">
       <Header 
       @click-on-menu-btn = "toggleMenu"
       />
-      <router-view />
+      <div class="page-container">
+         <router-view />
+      </div>
       <Footer />
     </div>
 
@@ -41,25 +43,5 @@ export default {
 
 <style lang="scss">
 @import "~materialize-css/dist/css/materialize";
-*{
-  transition: 0.3s;
-}
-body {
-  color: black;
-  min-height: 100vh;
-  background-color: #ebedef;
-}
-.flex {
-  display: flex;
-}
-.page-content{
-  width: 100%;
-  &.menuIsOpen{
-    margin-left: 256px;
-  }
-}
-
-.wrapper{
-  padding: 0px 16px;
-}
+@import "@/assets/scss/common.scss";
 </style>

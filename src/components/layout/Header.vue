@@ -46,6 +46,7 @@ nav {
   width: 0;
   height: auto;
   width: 100%;
+  z-index: 99;
 }
 
 .nav-wrapper {
