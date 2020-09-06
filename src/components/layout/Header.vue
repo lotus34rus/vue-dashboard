@@ -10,7 +10,7 @@
             <router-link to="/">Dashboard</router-link>
           </li>
           <li>
-            <router-link to="/about">Users</router-link>
+            <router-link to="/users">Users</router-link>
           </li>
         </ul>
       </div>

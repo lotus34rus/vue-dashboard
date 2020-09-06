@@ -17,11 +17,10 @@
       <line-chart :chartdata="chartdata" :options="options" class="chart-big"></line-chart>
     </div>
     <div class="chart-progress">
-      <ChartProgressBar :percent = '40' color = '#ff0000' bar-title = 'Visits' :count = "29.701" />
-      <ChartProgressBar :percent = '70' color = '#ff00ff' bar-title = 'Leads' :count = "9.025" />
-      <ChartProgressBar :percent = '45' color = '#ff430ff' bar-title = 'Unigue' :count = "10.025" />
-      <ChartProgressBar :percent = '12' color = '#f313ff' bar-title = 'New' :count = "5.025" />
-
+      <ChartProgressBar :percent="40" color="#ff0000" bar-title="Visits" :count="29.701" />
+      <ChartProgressBar :percent="70" color="#ff00ff" bar-title="Leads" :count="9.025" />
+      <ChartProgressBar :percent="45" color="#ff430ff" bar-title="Unigue" :count="10.025" />
+      <ChartProgressBar :percent="12" color="#f313ff" bar-title="New" :count="5.025" />
     </div>
   </div>
 </template>
@@ -91,7 +90,7 @@ export default {
     border-radius: 0;
     z-index: 1;
   }
-  .active{
+  .active {
     background-color: #498882;
   }
 }
@@ -99,10 +98,7 @@ export default {
   height: 300px;
 }
 
-.card {
-  background: white;
-  padding: 1.25rem;
-}
+
 .chart__title {
   &-name {
     font-size: 21px;

@@ -26,6 +26,19 @@ body {
     padding-top: 2rem;
 }
 
+.card {
+    background: white;
+    padding: 1.25rem;
+    &-header{
+        padding: .75rem 0;
+        margin-bottom: 20px;
+        border-bottom: 1px solid;
+        background-color: #fff;
+        border-color: #d8dbe0;
+        font-size: 16px;
+    }
+  }
+
 /*FONT*/
 .text-white{
     color: white;
