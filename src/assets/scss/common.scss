@@ -2,6 +2,10 @@
     transition: 0.3s;
     outline: none !important;
 }
+#app{
+    min-height: 100vh;
+    position: relative;
+}
 html{
     font-size: 16px;
 }
@@ -15,6 +19,9 @@ body {
 }
 .wrapper {
     width: 100%;
+    position: absolute;
+    min-height: 100vh;
+    padding-bottom: 50px;
     &.menuIsOpen {
         margin-left: 256px;
         width: calc(100% - 256px);
@@ -35,6 +42,12 @@ body {
         border-bottom: 1px solid;
         border-color: #d8dbe0;
         font-size: 16px;
+    }
+    &-footer{
+        border-top: 1px solid;
+        border-color: #d8dbe0;
+        padding: .75rem 0;
+        font-size: 14px;
     }
   }
 
