@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar" :class="{active: menuIsOpen}">
     <router-link to="/" class="sidebar__logo">
-      <img src="img/md-dash.png" alt />
+      <img src="/img/md-dash.png" alt />
     </router-link>
     <ul>
       <li class="waves-effect waves-default">

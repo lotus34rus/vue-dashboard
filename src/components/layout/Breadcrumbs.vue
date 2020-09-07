@@ -1,7 +1,7 @@
 <template>
   <div class="col s12 dm_breadcrumb">
     <router-link to="/">Home</router-link>/
-    <span>Dashboard</span>
+    <span>{{$route.name || 'Page'}}</span>
   </div>
 </template>
 
