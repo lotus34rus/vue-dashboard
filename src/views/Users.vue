@@ -23,17 +23,16 @@
           </table>
 
           <ul class="pagination">
-         
-            <li
-              v-for="page in pageCount"
-              :key="page"
-              :class="{active: page===currentPage}"
-              @click="goToPage(page)"
-            >
-              <a href="#!">{{page}}</a>
+            <li class="waves-effect" @click="currentPage--" v-if="currentPage > 1">
+              <a href="#!">
+                <i class="material-icons">chevron_left</i>
+              </a>
+            </li>
+            <li v-for="page in pageCount" :key="page" :class="{active: page==currentPage}">
+              <a href="#!" @click.prevent="currentPage = page">{{page}}</a>
             </li>
 
-            <li class="waves-effect" @click="goToPage(currentPage+1)">
+            <li class="waves-effect" @click="currentPage++" v-if="currentPage < pageCount">
               <a href="#!">
                 <i class="material-icons">chevron_right</i>
               </a>
@@ -55,24 +54,34 @@ export default {
       users: null,
       usersPage: null,
       currentPage: 1,
-      perPage: 5,
+      perPage: 3,
       pageCount: 0,
     };
+  },
+
+  watch: {
+    currentPage: function (from, to) {
+      this.usersPage = this.users.slice(
+        this.perPage * (this.currentPage - 1),
+        this.perPage * (this.currentPage - 1) + this.perPage
+      );
+    },
   },
   methods: {
     getUserInfoPage(id) {
       this.$router.push("users/" + id);
     },
 
-    goToPage(page) {
-      if (page >= 1 && page <= this.pageCount) {
-        this.usersPage = this.users.slice(
-          this.perPage * (this.currentPage - 1),
-          this.perPage * (this.currentPage - 1) + this.perPage
-        );
-        this.currentPage = page;
-      }
-    },
+    // goToPage(page) {
+    //   console.log('click');
+    //   if (page >= 1 && page <= this.pageCount) {
+    //     this.usersPage = this.users.slice(
+    //       this.perPage * (this.currentPage - 1),
+    //       this.perPage * (this.currentPage - 1) + this.perPage
+    //     );
+    //     this.currentPage = page;
+    //   }
+    // },
   },
   mounted() {
     axios.get("https://jsonplaceholder.typicode.com/users").then((response) => {
