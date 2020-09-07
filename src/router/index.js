@@ -19,7 +19,11 @@ Vue.use(VueRouter)
     path: '/users/:id',
     name: 'User',
     component: () => import('../views/UserPage.vue'),
-
+  },
+  {
+    path: '/colors',
+    name: 'Colors',
+    component: () => import('../views/Colors.vue'),
   }
 ]
 
