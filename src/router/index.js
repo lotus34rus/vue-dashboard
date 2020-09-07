@@ -24,6 +24,11 @@ Vue.use(VueRouter)
     path: '/colors',
     name: 'Colors',
     component: () => import('../views/Colors.vue'),
+  },
+  {
+    path: '/breadcrumb',
+    name: 'Breadcrumb',
+    component: () => import('../views/Breadcrumb.vue'),
   }
 ]
 

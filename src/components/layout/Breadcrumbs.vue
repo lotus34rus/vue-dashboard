@@ -6,7 +6,7 @@
 </template>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 .dm_breadcrumb {
   width: 100%;
   border-top: 1px solid rgba(0, 0, 21, 0.2);

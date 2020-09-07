@@ -38,7 +38,7 @@
             <div class="collapsible-body">
               <ul>
                 <li>
-                  <router-link to="/breadcrumbs">Breadcrumbs</router-link>
+                  <router-link to="/breadcrumb">Breadcrumbs</router-link>
                 </li>
                 <li>
                   <router-link to="/collapses">Collapses</router-link>
