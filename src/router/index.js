@@ -30,11 +30,15 @@ Vue.use(VueRouter)
     name: 'Breadcrumb',
     component: () => import('../views/Breadcrumb.vue'),
   },
-  
   {
     path: '/collapses',
     name: 'Collapses',
     component: () => import('../views/Collapses.vue'),
+  },  
+  {
+    path: '/forms',
+    name: 'Forms',
+    component: () => import('../views/Forms.vue'),
   }
 ]
 

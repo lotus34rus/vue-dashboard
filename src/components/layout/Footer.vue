@@ -3,7 +3,7 @@
     © 2020 MD-dashboard
     <span class="right">
       Powered by
-      <a href="dm-code.ru">DM-CODE</a>
+      <a href="http://dm-code.ru" target="_blank">DM-CODE</a>
     </span>
   </footer>
 </template>
