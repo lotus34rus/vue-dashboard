@@ -29,6 +29,12 @@ Vue.use(VueRouter)
     path: '/breadcrumb',
     name: 'Breadcrumb',
     component: () => import('../views/Breadcrumb.vue'),
+  },
+  
+  {
+    path: '/collapses',
+    name: 'Collapses',
+    component: () => import('../views/Collapses.vue'),
   }
 ]
 
