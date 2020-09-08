@@ -39,6 +39,11 @@ Vue.use(VueRouter)
     path: '/forms',
     name: 'Forms',
     component: () => import('../views/Forms.vue'),
+  },  
+  {
+    path: '/charts',
+    name: 'Charts',
+    component: () => import('../views/Charts.vue'),
   }
 ]
 
