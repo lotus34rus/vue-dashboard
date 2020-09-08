@@ -44,6 +44,11 @@ Vue.use(VueRouter)
     path: '/charts',
     name: 'Charts',
     component: () => import('../views/Charts.vue'),
+  },  
+  {
+    path: '/pages',
+    name: 'Pages',
+    component: () => import('../views/Pages.vue'),
   }
 ]
 

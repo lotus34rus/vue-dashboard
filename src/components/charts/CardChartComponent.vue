@@ -2,7 +2,7 @@
     <div>
     <div class="col s3">
         <div class="card gradient--blue text-white">
-          <div class="card-header">
+          <div class="card-header column">
             <div class="text-value-lg bold">9.823</div>
             <div>Members online</div>
           </div>
@@ -14,7 +14,7 @@
 
       <div class="col s3">
         <div class="card gradient--lightblue text-white">
-          <div class="card-header">
+          <div class="card-header column">
             <div class="text-value-lg bold">9.823</div>
             <div>Members online</div>
           </div>
@@ -26,7 +26,7 @@
 
       <div class="col s3">
         <div class="card gradient--orange text-white">
-          <div class="card-header">
+          <div class="card-header column">
             <div class="text-value-lg bold">9.823</div>
             <div>Members online</div>
           </div>
@@ -38,7 +38,7 @@
 
       <div class="col s3">
         <div class="card gradient--red text-white">
-          <div class="card-header">
+          <div class="card-header column">
             <div class="text-value-lg bold">9.823</div>
             <div>Members online</div>
           </div>
@@ -105,7 +105,11 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" >
+.card-header.column{
+  align-items: flex-start;
+  flex-direction: column;
+}
 .card-body {
   padding-top: 20px;
   canvas {

@@ -62,7 +62,7 @@
       </li>
     </ul>
 
-    <ul>
+    <!-- <ul>
       <li>
         <div class="subheader">EXTRA</div>
       </li>
@@ -71,7 +71,7 @@
           <i class="material-icons">star</i>Pages
         </router-link>
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
