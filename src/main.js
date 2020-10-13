@@ -5,11 +5,11 @@ import router from './router'
 import store from './store'
 
 import 'materialize-css/dist/js/materialize.min.js'
-
+import Vue2TouchEvents from 'vue2-touch-events'
 
 import KProgress from 'k-progress';
 Vue.component('k-progress', KProgress);
-
+Vue.use(Vue2TouchEvents)
 
 
 Vue.config.productionTip = false

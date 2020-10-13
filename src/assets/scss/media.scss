@@ -1,0 +1,34 @@
+@media screen and (max-width: 767px){
+    #app{
+        overflow-x: hidden;
+    }
+
+    .wrapper.menuIsOpen{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 480px){
+    nav ul a{
+        font-size: 0.8rem;
+    }
+
+    .dm_breadcrumb{
+        a{
+            font-size: 0.8rem;
+        }
+    }
+
+    .usertable th{
+        font-size: 0.8rem;
+    }
+    .chart__header{
+        flex-direction: column;
+    }
+    .chart__btns{
+        display: flex;
+        margin-bottom: 15px;
+    }
+}
+

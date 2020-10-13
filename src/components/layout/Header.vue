@@ -5,7 +5,7 @@
         <button type="button" class="hamburger" @click="$emit('click-on-menu-btn')">
           <span></span>
         </button>
-        <ul class="hide-on-med-and-down">
+        <ul>
           <li>
             <router-link to="/">Dashboard</router-link>
           </li>

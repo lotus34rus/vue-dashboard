@@ -4,7 +4,7 @@
       <div class="col s12">
         <div class="card">
           <div class="card-header">User table</div>
-          <table class="usertable highlight">
+          <table class="usertable highlight responsive-table">
             <thead>
               <tr>
                 <th>Name</th>

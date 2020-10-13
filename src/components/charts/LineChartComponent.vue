@@ -1,26 +1,53 @@
 <template>
   <div class="big-chart chart card">
-    <div class="chart__header">
-      <div class="chart__title">
-        <h2 class="chart__title-name">Traffic</h2>
-        <div class="chart__title-date">November 2020</div>
+    <Preloader v-if="loading" />
+    <div v-else>
+      <div class="chart__header">
+        <div class="chart__title">
+          <h2 class="chart__title-name">Traffic</h2>
+          <div class="chart__title-date">November 2020</div>
+        </div>
+
+        <div class="chart__btns">
+          <a class="waves-effect waves-light btn active">Day</a>
+          <a class="waves-effect waves-light btn">Month</a>
+          <a class="waves-effect waves-light btn">Year</a>
+        </div>
       </div>
 
-      <div class="chart__btns">
-        <a class="waves-effect waves-light btn active">Day</a>
-        <a class="waves-effect waves-light btn">Month</a>
-        <a class="waves-effect waves-light btn">Year</a>
+      <div class="line-chart">
+        <line-chart
+          :chartdata="chartdata"
+          :options="options"
+          class="chart-big"
+        ></line-chart>
       </div>
-    </div>
-
-    <div class="line-chart">
-      <line-chart :chartdata="chartdata" :options="options" class="chart-big"></line-chart>
-    </div>
-    <div class="chart-progress">
-      <ChartProgressBar :percent="40" color="#ff0000" bar-title="Visits" :count="29.701" />
-      <ChartProgressBar :percent="70" color="#ff00ff" bar-title="Leads" :count="9.025" />
-      <ChartProgressBar :percent="45" color="#ff430ff" bar-title="Unigue" :count="10.025" />
-      <ChartProgressBar :percent="12" color="#f313ff" bar-title="New" :count="5.025" />
+      <div class="chart-progress s12">
+        <ChartProgressBar
+          :percent="40"
+          color="#ff0000"
+          bar-title="Visits"
+          :count="29.701"
+        />
+        <ChartProgressBar
+          :percent="70"
+          color="#ff00ff"
+          bar-title="Leads"
+          :count="9.025"
+        />
+        <ChartProgressBar
+          :percent="45"
+          color="#ff430ff"
+          bar-title="Unigue"
+          :count="10.025"
+        />
+        <ChartProgressBar
+          :percent="12"
+          color="#f313ff"
+          bar-title="New"
+          :count="5.025"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -29,14 +56,20 @@
 <script>
 import LineChart from "@/utils/LineChart.js";
 import ChartProgressBar from "@/components/progress/ChartProgressBar";
+import Preloader from "@/components/layout/Preloader";
 
 export default {
   components: {
     LineChart,
     ChartProgressBar,
+    Preloader,
+  },
+  mounted() {
+    this.loading = false
   },
   data() {
     return {
+      loading: true,
       chartdata: {
         labels: ["January", "February", "Mart", "April", "May", "June", "Jule"],
         datasets: [
@@ -76,7 +109,7 @@ export default {
   border-bottom: 1px solid #d8dbe0;
   padding-bottom: 30px;
   canvas {
-    height: 100% !important;
+    height: 250px !important;
   }
 }
 .chart__header {
@@ -97,7 +130,6 @@ export default {
 .chart-big {
   height: 300px;
 }
-
 
 .chart__title {
   &-name {

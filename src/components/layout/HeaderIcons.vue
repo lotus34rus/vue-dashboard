@@ -1,6 +1,6 @@
 <template>
-  <div class="header-icons">
-    <ul class="right hide-on-med-and-down">
+  <div class="header-icons  hide-on-med-and-down">
+    <ul class="right ">
       <li>
         <i
           class="material-icons dropdown-trigger"

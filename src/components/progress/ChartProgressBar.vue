@@ -1,5 +1,5 @@
 <template>
-  <div class="col s5 progress-bar">
+  <div class="col s12 m6 l3 progress-bar">
     <div class="progress-bar__name">{{barTitle}}</div>
     <div class="progress-bar__count">{{count}} ( {{percent}}% )</div>
     <k-progress :percent="percent" :color="color" :show-text="false" />
@@ -19,6 +19,9 @@ export default {
 <style lang="scss">
 .k-progress-outer {
   padding-right: 0 !important;
+}
+.chart-progress {
+    flex-wrap: wrap;
 }
 .progress-bar {
   padding: 10px 20px;

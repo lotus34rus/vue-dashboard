@@ -1,6 +1,6 @@
 <template>
-    <div>
-    <div class="col s3">
+    <div class="card-charts">
+      <div class="col s12 m6 l3">
         <div class="card gradient--blue text-white">
           <div class="card-header column">
             <div class="text-value-lg bold">9.823</div>
@@ -12,7 +12,7 @@
         </div>
       </div>
 
-      <div class="col s3">
+      <div class="col s12 m6 l3">
         <div class="card gradient--lightblue text-white">
           <div class="card-header column">
             <div class="text-value-lg bold">9.823</div>
@@ -24,7 +24,7 @@
         </div>
       </div>
 
-      <div class="col s3">
+      <div class="col s12 m6 l3">
         <div class="card gradient--orange text-white">
           <div class="card-header column">
             <div class="text-value-lg bold">9.823</div>
@@ -36,7 +36,7 @@
         </div>
       </div>
 
-      <div class="col s3">
+      <div class="col s12 m6 l3">
         <div class="card gradient--red text-white">
           <div class="card-header column">
             <div class="text-value-lg bold">9.823</div>
@@ -63,6 +63,7 @@ export default {
   components: {
     LineChart,
     BarChart,
+    
   },
 
   data() {
@@ -106,14 +107,17 @@ export default {
 
 
 <style lang="scss" >
+.card-charts .card{
+  max-height: 230px;
+}
 .card-header.column{
   align-items: flex-start;
   flex-direction: column;
 }
-.card-body {
+.card-charts .card-body {
   padding-top: 20px;
   canvas {
-    height: 70px;
+    height: 70px !important;
   }
 }
 </style>
